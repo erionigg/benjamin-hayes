@@ -1,0 +1,297 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: translateY(0); /* Initially visible */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header.hidden {
+  transform: translateY(-100%); /* Moves the header out of view */
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header .navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header .navbar ul li a:hover {
+  color: #f0a500; /* Highlight color */
+}
+
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('https://source.unsplash.com/random');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content button {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+.hero-content button:hover {
+    background-color: #c43e20;
+}
+
+/* About Section */
+.about, .services, .contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+.about h1, .services h2, .contact h2 , .Title{
+  color: #5a3b3b; 
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* Services Section */
+.service-cards {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-start;
+     /* Space between cards */
+    padding: 20px;
+     /* Adjust background as needed */
+  }
+  
+  .card {
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Adds a hover effect */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+  }
+
+
+
+  /*blog section*/
+/* Container styling */
+
+.slider-container {
+ 
+ 
+    text-align: center; /* Centers the heading horizontally */
+    position: relative; /* Allow absolute positioning of the caption */
+    overflow: hidden; 
+  background-color: #E8E6E6;
+ /* Set maximum width for square slides */
+
+  padding: 20px;
+}
+
+/* Slider styling */
+.slider {
+  max-width: 600px;
+  gap:20px;
+  display: flex;
+  width: 100%;
+  animation: slideAnimation 10s infinite linear; /* Auto-slide on load */
+}
+
+/* Slide styling */
+.slide {
+  min-width: 100%;
+  /* Ensures square aspect ratio */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image styling */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the image square */
+}
+
+/* Caption styling: placed near the bottom-middle of the image */
+.caption {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Keyframes for autoplay animation */
+@keyframes slideAnimation {
+  0% { transform: translateX(0); }
+  16.6% { transform: translateX(-100%); }
+  33.3% { transform: translateX(-200%); }
+  50% { transform: translateX(-300%); }
+  66.6% { transform: translateX(-400%); }
+  83.3% { transform: translateX(-500%); }
+  100% { transform: translateX(-600%); }
+}
+
+
+/* Contact Section */
+.contact {
+  font-family: Arial, sans-serif;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 0;
+}
+
+.contact-card {
+  width: 600px;
+ 
+  padding: 20px 0;
+  color: #3e3e3e;
+  text-align: center;
+}
+
+.contact-card h1 {
+  font-size: 24px;
+  color: #5c4533;
+  margin: 0;
+  font-weight: normal;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: #a9a9a9;
+  margin: 20px auto;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #3e3e3e;
+  padding: 0 30px;
+}
+
+.contact-info .left,
+.contact-info .right {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-info .right {
+  text-align: right;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #3e3e3e;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-info .icon {
+  margin-right: 5px;
+        }
+
+        .footer {
+          text-align: center;
+            margin: 0;
+            padding: 10px 0;
+            font-size: 14px;
+            color: #3e3e3e;
+         
+        }
+        
